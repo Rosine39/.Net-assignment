@@ -1,0 +1,55 @@
+@page
+@model Products.Pages_ItemPages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Items</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Items.ItemName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Items.ItemName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Items.ItemDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Items.ItemDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Items.ItemImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Items.ItemImage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Items.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Items.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Items.Released_Date_Time)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Items.Released_Date_Time)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Items.Expired_Date_Time)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Items.Expired_Date_Time)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Items.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
